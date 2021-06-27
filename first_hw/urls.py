@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from coles_shop import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello', views.hello_world),
+    path('', views.index),
+    path('products/<int:id>/', views.product_item),
+
 ]
