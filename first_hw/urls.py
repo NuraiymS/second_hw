@@ -18,10 +18,12 @@ from django.urls import path
 
 from coles_shop import views
 
-urlpatterns = [
+urlpatterns = {
     path('admin/', admin.site.urls),
     path('hello', views.hello_world),
     path('', views.index),
     path('products/<int:id>/', views.product_item),
+    path('product/', views.product_list),
+    # path('review/', views.review_list),
 
-]
+}

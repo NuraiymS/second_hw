@@ -6,18 +6,16 @@
 </head>
 <body>
 <h1> {{ product.title }}</h1>
-
-{#<hr>#}
+<hr>
 {#{% for products in product %}#}
 {#    <h4> {{ products.id }}:{{ products.category }}</h4>#}
-{#    <p>{{ products.price }}</p>#}
-{#    <hr>#}
+
 {#{% endfor %}#}
 {#<hr>#}
 {% for review in reviews %}
     <h4> {{ review.id }}:{{ review.text }}</h4>
     <hr>
 {% endfor %}
-
+{#<p>{{ products.price }}</p>#}
 </body>
 </html>
