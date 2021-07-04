@@ -9,13 +9,14 @@
 <form action="/product/" method="get">
 
     <input type="text" name="search_text" placeholder="Enter name">
-    <select type="product">
-    <option value="">All products</option>
-        {% for product in products %}
-        <option value="product.id">
+    <select name="product">
+        {% for product in product_selecter%}
+        <option value="{{ product.title }}">
             {{ product.title }}
         </option>
         {% endfor %}
+    <option value="">All products</option>
+    </select>
     <input type="submit" value="Send">
 </form>
 {% for product in products %}
